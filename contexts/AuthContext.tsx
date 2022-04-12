@@ -42,6 +42,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }, []);
 
+  /**Pegar as informações e fazer login */
   async function signIn({ email, password }: signInCredentials) {
     try {
       const response = await api.post("sessions", {
