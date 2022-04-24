@@ -3,7 +3,6 @@ import { AuthContext } from "../contexts/AuthContext";
 import { setupApiClient } from "../services/api";
 import { api } from "../services/apiClient";
 import { withSSRAuth } from "../utils/withSSRAuth";
-import { destroyCookie } from "nookies";
 
 export default function Dashboard() {
   const { user } = useContext(AuthContext);
