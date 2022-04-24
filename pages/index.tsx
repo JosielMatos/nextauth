@@ -41,6 +41,7 @@ const Home: NextPage = () => {
 
 export default Home;
 
+/** Server side com contexto de autenticação */
 export const getServerSideProps = withSSRGuest(async (ctx) => {
   return {
     props: {},
