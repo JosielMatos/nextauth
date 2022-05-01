@@ -17,7 +17,7 @@ export default function Dashboard() {
       <h1>Dashboard {user?.email}</h1>
 
       <Can permissions={['metrics.list']}>
-        <div>Métricas</div>
+        <h2>Métricas</h2>
       </Can>
     </>
   );
@@ -28,7 +28,6 @@ export const getServerSideProps = withSSRAuth(async (ctx) => {
   const apiClient = setupApiClient(ctx);
 
   const response = await apiClient.get("/me");
-  console.log(response.data);
 
   return {
     props: {},
